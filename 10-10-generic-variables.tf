@@ -4,6 +4,12 @@ variable "aws_region" {
   default     = "eu-central-1"
 }
 
+variable "aws_cli_profile" {
+  description = "Name of AWS CLI profile. This will give terraform access to respective AWS account where resources will be provisioned."
+  type        = string
+  default     = "eks_mtp"
+}
+
 variable "company" {
   description = "Name of the company. Will be used in constructing the prefix for most of the artefacts, e.g. acme-it-dev-eks-cluster."
   type        = string
